@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans&display=swap" rel="stylesheet">
+    <script src="js/fun.js" defer></script>
+    <title>Enigma del Corazón</title>
+</head>
+
+
+<body>
+
+    <!-- PANTALLA DE INICIO -->
+
+    <!-- contenedor general inicio -->
+
+    <div class="start-screen">
+
+        <!-- Título -->
+        <h1 class="start-screen__title">ENIGMA DEL CORAZÓN</h1>
+
+        <!-- Imagen centrada svg -->
+        <img class="start-screen__img" src="images/inicio_corazon.svg" alt="abrir mensaje de presentación juego">
+        
+        <button class="start-screen__button" id="startButton">START</button>
+        
+        <!-- Bocadillo presentación Inicio clicable -->
+        <img class="start-screen__presentation-bubble" src="images/presentación.svg" alt="mensaje de presentación del juego">
+
+    </div>
+
+    <!-- FIN PANTALLA INICIO -->
+
+
+    <!-- PANTALLA LEVEL 1 - JUEGO MEMORY -->
+
+    <!-- contenedor general level1 -->
+    <div class="screen screen__level1">
+
+        <!-- contenedor título y juego -->
+        <div class="screen__level1-container">
+
+            <!-- Título -->
+            <h2 class="screen__title">NIVEL 1 - LOVE MEMORY</h2>
+           
+            <!-- juego generado en js -->
+            <div class="game"></div>
+
+            <!-- contenedor footer del level 1 -->
+            <div class="screen__footer">
+            <!-- Items footer (llave instrucciones y flecha next level) -->
+                <img class="footer__item-key" src="images/llave.svg" alt="abrir bocadillo instrucciones nivel">
+                <img class="footer__item-arrow" src="images/flechalevel1.svg" alt="ir al siguiente nivel">
+            </div>
+        
+        </div>
+        
+        <!-- bocadillo instrucciones level 1 -->
+        <img class="instruction__bubble" src="images/instrucciones-level1.svg" alt="bocadillo con instrucciones nivel">
+        
+    </div>
+    
+    <!-- FIN PANTALLA LEVEL 1 - JUEGO MEMORY-->
+    
+    
+    <!-- PANTALLA LEVEL 2 - JUEGO - GUESS THE LOVE SONG -->
+
+    <!-- contenedor general level 2 -->
+    <div class="screen screen__level2">
+
+        <!-- contenedor título y juego -->
+        <div class="screen__level2-container">
+
+            <!-- Título -->
+            <h2 class="screen__title">NIVEL 2 - GUESS THE LOVE SONG</h2>    
+            <!-- título canción -->
+            <p class="screen__level2-title--song"></p>
+            <!-- pista -->
+            <p class="screen__level2-hint"></p>
+            <button class="screen__level2-Button--play"></button>
+            <!-- audio cancion -->
+            <audio class="screen__level2-audio" preload="auto"></audio>  
+            <!-- etiqueta pregunta canción -->
+            <label class="screen__level2-label--question" for="letterInput">¿Con qué palabra acaba la canción?:</label>
+            <!-- input para poner palabra -->
+            <input class="screen__level2-input" type="text" id="letterInput">
+            <!-- botón para adivinar -->
+            <button class="screen__level2-button--guess">Adivinar</button>
+            <!-- mensaje del estado de vidas en el juego, de juego ganado o perdido -->
+            <div class="screen__level2-status"></div>
+
+        </div>
+
+        <!-- contenedor footer del level 2 -->
+        <div class="screen__footer">
+            <!-- Items footer (llave instrucciones y flecha next level) -->
+            <img class="footer__item-key" src="images/llave.svg" alt="abrir bocadillo instrucciones nivel">
+            <img class="footer__item-arrow" src="images/flechalevel2.svg" alt="ir al siguiente nivel">
+        </div>
+
+        <!-- bocadillo instrucciones level 2 -->
+        <img class="instruction__bubble" src="images/Instrucciones-level2.svg" alt="bocadillo con instrucciones del nivel">
+
+    </div>
+    <!-- FIN PANTALLA LEVEL 2 - GUESS THE LOVE SONG -->
+
+
+    <!-- PANTALLA LEVEL 3 - DO YOU KNOW THE ART OF LOVE?-->
+
+    <!-- contenedor general level 3 -->
+    <div class="screen screen__level3">
+
+
+        <!-- contenedor juego - do you know the art of love?-->
+        <div class="screen__level3-container--quiz">
+
+            <!-- Título -->
+            <h2 class="screen__title">NIVEL 3 - ¿DO YOU KNOW THE ART OF LOVE?</h2>
+
+            <!-- pregunta quiz-->
+            <p class="screen__level3-question--quiz">¿Cuál es el título de esta pintura?</p>
+
+            <!-- resultado quiz -->
+            <div class="game__quiz-result"></div>
+
+            <!-- pintura quiz 1 -->
+            <div class="game__quiz-containerGame">
+                <!--imagen en formato jp y webp-->
+                <picture class="game__quiz-picture">
+                    <source type="image/webp" srcset="images/los-amantes-magritte.webp">
+                    <source type="image/jpg" srcset="images/los-amantes-magritte.jpg">
+                    <img class="game__quiz-img" src="images/los-amantes-magritte.jpg" alt="pintura los amantes de René Magritte" loading="lazy">
+                </picture>
+
+                <!-- contenedor opciones de quiz 1-->
+                <div class="game__quiz-options">
+                    <!--opciones individuales (títulos) -->
+                    <button class="game__quiz-option">Pareja en el Père Lathuille (Édouard Manet)</button>
+                    <button class="game__quiz-option">El Primer Beso (W.A Bouguereau)</button>
+                    <button class="game__quiz-option">Los Amantes (René Magritte)</button> 
+                </div>
+
+            </div>
+    
+            <!--pintura quiz 2-->
+            <div class="game__quiz-containerGame">
+                <!-- imagen en formato webp y jpg-->
+                <picture class="game__quiz-picture">
+                    <source type="image/webp" srcset="images/romeo-julieta-dicksee.webp">
+                    <source type="image/jpg" srcset="images/romeo-julieta-dicksee.jpg">
+                    <img class="game__quiz-img" src="images/romeo-julieta-dicksee.jpg" alt="Pintura Romeo y Julieta de Dicksee" loading="lazy">                </picture>
+
+                <!-- contenedor opciones de quiz 2-->
+                <div class="game__quiz-options">
+                    <!--opciones individuales (títulos) -->
+                    <button class="game__quiz-option">El beso (Francesco Hayez)</button>
+                    <button class="game__quiz-option">Romeo y Julieta (Frank Dicksee)</button>
+                    <button class="game__quiz-option">El pescador y la sirena (Frederick Leighton)</button> 
+                </div>
+
+            </div>
+
+            <!--pintura quiz 3-->
+            <div class="game__quiz-containerGame">
+
+                <!-- imagen en formato webp y jpg-->
+                <picture class="game__quiz-picture">
+                    <source type="image/webp" srcset="images/la-carta-boucher.webp">
+                    <source type="image/jpeg" srcset="images/la-carta-boucher.jpg">
+                    <img class="game__quiz-img" src="images/la-carta-boucher.jpg" alt="Pintura La Carta de Boucher" loading="lazy">
+                </picture>
+
+                <!-- contenedor opciones de quiz 3 (títulos) -->
+                <div class="game__quiz-options">
+                    <button class="game__quiz-option">La Carta (Francois Boucher)</button>
+                    <button class="game__quiz-option">La confesión del Amor (Jean-Honore Fragonard)</button>
+                    <button class="game__quiz-option">El Jardín del Amor (Rubens)</button> 
+                </div>
+
+            </div>
+
+            
+            <!--pintura quiz 4-->
+            <div class="game__quiz-containerGame">
+                <!-- imagen en formato webp y jpg-->
+                <picture class="game__quiz-picture">
+                    <source type="image/webp" srcset="images/el-beso-hayez.webp">
+                    <source type="image/jpeg" srcset="images/el-beso-hayez.jpg">
+                    <img class="game__quiz-img" src="images/el-beso-hayez.jpg" alt="Pintura El Beso de Hayez" loading="lazy">
+                </picture>
+
+                <!-- contenedor opciones de quiz 4 (títulos) -->
+                <div class="game__quiz-options">
+                    <button class="game__quiz-option">El Beso (Gustav Klimt)</button>
+                    <button class="game__quiz-option">El Beso (Francesco Hayez)</button>
+                    <button class="game__quiz-option">Encuentro en la torre (F.William Burton)</button> 
+                </div>
+
+            </div>
+
+            <!-- contenedor footer del level 3 -->
+            <div class="screen__footer">
+                <!-- Items footer (llave instrucciones y flecha next level) -->
+                <img class="footer__item-key" src="images/llave.svg" alt="abrir bocadillo instrucciones nivel">
+                <img class="footer__item-arrow" src="images/flechalevel3.svg" alt="ir al siguiente nivel">
+            </div>
+
+        </div>
+
+        <!-- bocadillo instrucciones level 3 -->
+        <img class="instruction__bubble" src="images/Instrucciones-level3.svg" alt="bocadillo con instrucciones del nivel">
+
+    </div>
+    <!-- FINAL LEVEL 3 - DO YOU KNOW THE ART OF LOVE? -->
+
+
+    <!-- PANTALLA LEVEL 4 - EL GRAN ENIGMA -->
+
+    <!-- contenedor general level 4 -->
+    <div class="screen screen__level4">
+
+                
+        <!-- contenedor pregunta -->
+        <div class="screen__level4-container-game">
+
+            <h2 class="screen__title">LEVEL 4 - EL GRAN ENIGMA</h2>
+
+            <!-- pregunta -->
+            <p class="screen__level4-question">¿QUIERES SER MI NOVI@?</p>
+
+            <!-- img svg gato -->
+            <img class="screen__level4-img" src="images/gatito.svg" alt="">
+    
+            <!--contenedor respuestas-->
+            <div class="screen__level4-answers">
+
+                <!-- botón sí -->
+                <button class="answer__button-yes">SÍ</button>
+    
+                <!-- botón no -->
+                <button class="answer__button-no">NO</button>
+            
+            </div>
+
+            <!-- contenedor footer del level 4 -->
+            <div class="screen__footer">
+                <!-- Items footer (llave instrucciones y vuelta a home) -->
+                <img class="footer__item-key" src="images/llave.svg" alt="abrir bocadillo mensaje nivel">
+                <img class="footer__item-home" src="images/Home.svg" alt="ir a Inicio">
+            </div>
+
+        </div>
+
+        <!-- bocadillo instrucciones level 4 -->
+        <img class="instruction__bubble" src="images/Instrucciones-level4.svg" alt="bocadillo con instrucciones del nivel">
+
+    </div>
+    <!-- FIN PANTALLA LEVEL 4 - EL GRAN ENIGMA-->
+
+
+    <!-- PANTALLA FINAL (si se responde sí)-->
+
+    <!-- contenedor general Pantalla Final -->
+    <div class="screen screen__final">
+        <!-- container pantalla final elementos -->
+        <div class="screen__final-container">
+            <!--frase-->
+            <p class="screen__final-text">Sabía que dirías que sí (era imposible)</p>
+            <!-- imagen svg animada-->
+            <img class="screen__final-img" src="images/svg-cat-end.svg" alt="">
+            
+        </div>
+    </div>
+
+    <!-- FINAL DE PANTALLA FINAL (si se responde sí)-->
+
+</body>
+
+</html>
